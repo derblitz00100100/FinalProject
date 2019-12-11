@@ -61,7 +61,7 @@ public class CardsFragment extends Fragment {
         return outputStream.toString();
     }
 
-    private class cardAdapter extends ArrayAdapter<Card> {
+    private class CardAdapter extends ArrayAdapter<Card> {
         // make an instance variable to keep track of the hero list
         private List<Card> cardsList;
 
@@ -81,13 +81,13 @@ public class CardsFragment extends Fragment {
                 convertView = inflater.inflate(R.layout.item_hero, parent, false);
             }
 
-            TextView textViewName = convertView.findViewById(R.id.textView_heroitem_name);
-            TextView textViewRank = convertView.findViewById(R.id.textView_heroitem_rank);
-            TextView textViewDescription = convertView.findViewById(R.id.textView_heroitem_description);
+            TextView textViewName = convertView.findViewById(R.id.textview_itemcard_name);
+            TextView textViewElixir = convertView.findViewById(R.id.textview_itemcard_elixir);
+            TextView textViewType = convertView.findViewById(R.id.textview_itemcard_type);
 
-            textViewName.setText(heroesList.get(position).getName());
-            textViewDescription.setText(heroesList.get(position).getDescription());
-            textViewRank.setText(String.valueOf(heroesList.get(position).getRanking()));
+            textViewName.setText(cardsList.get(position).getName());
+            textViewElixir.setText(cardsList.get(position).getElixir());
+            textViewType.setText(String.valueOf(cardsList.get(position).getType()));
 
             return convertView;
         }
