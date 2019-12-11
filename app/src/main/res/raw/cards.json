@@ -132,7 +132,7 @@
         "id": 26000011
     },
     {
-        "key": "skeleton-army",
+        "key": "skeletonarmy",
         "name": "Skeleton Army",
         "sc_key": "SkeletonArmy",
         "elixir": 3,
@@ -165,7 +165,7 @@
         "id": 26000014
     },
     {
-        "key": "baby-dragon",
+        "key": "babydragon",
         "name": "Baby Dragon",
         "sc_key": "BabyDragon",
         "elixir": 4,
@@ -198,7 +198,7 @@
         "id": 26000017
     },
     {
-        "key": "mini-pekka",
+        "key": "minipekka",
         "name": "Mini P.E.K.K.A",
         "sc_key": "MiniPekka",
         "elixir": 4,
@@ -209,7 +209,7 @@
         "id": 26000018
     },
     {
-        "key": "spear-goblins",
+        "key": "speargoblins",
         "name": "Spear Goblins",
         "sc_key": "SpearGoblins",
         "elixir": 2,
@@ -220,7 +220,7 @@
         "id": 26000019
     },
     {
-        "key": "giant-skeleton",
+        "key": "giantskeleton",
         "name": "Giant Skeleton",
         "sc_key": "GiantSkeleton",
         "elixir": 6,
@@ -231,7 +231,7 @@
         "id": 26000020
     },
     {
-        "key": "hog-rider",
+        "key": "hogrider",
         "name": "Hog Rider",
         "sc_key": "HogRider",
         "elixir": 4,
@@ -242,7 +242,7 @@
         "id": 26000021
     },
     {
-        "key": "minion-horde",
+        "key": "minionhorde",
         "name": "Minion Horde",
         "sc_key": "MinionHorde",
         "elixir": 5,
@@ -253,7 +253,7 @@
         "id": 26000022
     },
     {
-        "key": "ice-wizard",
+        "key": "icewizard",
         "name": "Ice Wizard",
         "sc_key": "IceWizard",
         "elixir": 3,
@@ -264,7 +264,7 @@
         "id": 26000023
     },
     {
-        "key": "royal-giant",
+        "key": "royalgiant",
         "name": "Royal Giant",
         "sc_key": "RoyalGiant",
         "elixir": 6,
@@ -297,7 +297,7 @@
         "id": 26000026
     },
     {
-        "key": "dark-prince",
+        "key": "darkprince",
         "name": "Dark Prince",
         "sc_key": "DarkPrince",
         "elixir": 4,
@@ -308,7 +308,7 @@
         "id": 26000027
     },
     {
-        "key": "three-musketeers",
+        "key": "threemusketeers",
         "name": "Three Musketeers",
         "sc_key": "ThreeMusketeers",
         "elixir": 9,
@@ -319,7 +319,7 @@
         "id": 26000028
     },
     {
-        "key": "lava-hound",
+        "key": "lavahound",
         "name": "Lava Hound",
         "sc_key": "LavaHound",
         "elixir": 7,
@@ -330,7 +330,7 @@
         "id": 26000029
     },
     {
-        "key": "ice-spirit",
+        "key": "icespirit",
         "name": "Ice Spirit",
         "sc_key": "IceSpirits",
         "elixir": 1,
@@ -341,7 +341,7 @@
         "id": 26000030
     },
     {
-        "key": "fire-spirits",
+        "key": "firespirits",
         "name": "Fire Spirits",
         "sc_key": "FireSpirits",
         "elixir": 2,
@@ -396,7 +396,7 @@
         "id": 26000035
     },
     {
-        "key": "battle-ram",
+        "key": "battleram",
         "name": "Battle Ram",
         "sc_key": "BattleRam",
         "elixir": 4,
@@ -407,7 +407,7 @@
         "id": 26000036
     },
     {
-        "key": "inferno-dragon",
+        "key": "infernodragon",
         "name": "Inferno Dragon",
         "sc_key": "InfernoDragon",
         "elixir": 4,
@@ -418,7 +418,7 @@
         "id": 26000037
     },
     {
-        "key": "ice-golem",
+        "key": "icegolem",
         "name": "Ice Golem",
         "sc_key": "IceGolemite",
         "elixir": 2,
@@ -429,7 +429,7 @@
         "id": 26000038
     },
     {
-        "key": "mega-minion",
+        "key": "megaminion",
         "name": "Mega Minion",
         "sc_key": "MegaMinion",
         "elixir": 3,
@@ -440,7 +440,7 @@
         "id": 26000039
     },
     {
-        "key": "dart-goblin",
+        "key": "dartgoblin",
         "name": "Dart Goblin",
         "sc_key": "BlowdartGoblin",
         "elixir": 3,
@@ -451,7 +451,7 @@
         "id": 26000040
     },
     {
-        "key": "goblin-gang",
+        "key": "goblingang",
         "name": "Goblin Gang",
         "sc_key": "GoblinGang",
         "elixir": 3,
@@ -462,7 +462,7 @@
         "id": 26000041
     },
     {
-        "key": "electro-wizard",
+        "key": "electrowizard",
         "name": "Electro Wizard",
         "sc_key": "ElectroWizard",
         "elixir": 4,
@@ -473,7 +473,7 @@
         "id": 26000042
     },
     {
-        "key": "elite-barbarians",
+        "key": "elitebarbarians",
         "name": "Elite Barbarians",
         "sc_key": "AngryBarbarians",
         "elixir": 6,
@@ -517,7 +517,7 @@
         "id": 26000046
     },
     {
-        "key": "royal-recruits",
+        "key": "royalrecruits",
         "name": "Royal Recruits",
         "sc_key": "RoyalRecruits",
         "elixir": 7,
@@ -528,7 +528,7 @@
         "id": 26000047
     },
     {
-        "key": "night-witch",
+        "key": "nightwitch",
         "name": "Night Witch",
         "sc_key": "DarkWitch",
         "elixir": 4,
@@ -550,7 +550,7 @@
         "id": 26000049
     },
     {
-        "key": "royal-ghost",
+        "key": "royalghost",
         "name": "Royal Ghost",
         "sc_key": "Ghost",
         "elixir": 3,
@@ -561,7 +561,7 @@
         "id": 26000050
     },
     {
-        "key": "ram-rider",
+        "key": "ramrider",
         "name": "Ram Rider",
         "sc_key": "RamRider",
         "elixir": 5,
@@ -594,7 +594,7 @@
         "id": 26000053
     },
     {
-        "key": "cannon-cart",
+        "key": "cannoncart",
         "name": "Cannon Cart",
         "sc_key": "MovingCannon",
         "elixir": 5,
@@ -605,7 +605,7 @@
         "id": 26000054
     },
     {
-        "key": "mega-knight",
+        "key": "megaknight",
         "name": "Mega Knight",
         "sc_key": "MegaKnight",
         "elixir": 7,
@@ -616,7 +616,7 @@
         "id": 26000055
     },
     {
-        "key": "skeleton-barrel",
+        "key": "skeletonbarrel",
         "name": "Skeleton Barrel",
         "sc_key": "SkeletonBalloon",
         "elixir": 3,
@@ -627,7 +627,7 @@
         "id": 26000056
     },
     {
-        "key": "flying-machine",
+        "key": "flyingmachine",
         "name": "Flying Machine",
         "sc_key": "DartBarrell",
         "elixir": 4,
@@ -638,7 +638,7 @@
         "id": 26000057
     },
     {
-        "key": "wall-breakers",
+        "key": "wallbreakers",
         "name": "Wall Breakers",
         "sc_key": "Wallbreakers",
         "elixir": 2,
@@ -649,7 +649,7 @@
         "id": 26000058
     },
     {
-        "key": "royal-hogs",
+        "key": "royalhogs",
         "name": "Royal Hogs",
         "sc_key": "RoyalHogs",
         "elixir": 5,
@@ -660,7 +660,7 @@
         "id": 26000059
     },
     {
-        "key": "goblin-giant",
+        "key": "goblingiant",
         "name": "Goblin Giant",
         "sc_key": "GoblinGiant",
         "elixir": 6,
@@ -682,7 +682,7 @@
         "id": 26000061
     },
     {
-        "key": "magic-archer",
+        "key": "magicarcher",
         "name": "Magic Archer",
         "sc_key": "EliteArcher",
         "elixir": 4,
@@ -693,7 +693,7 @@
         "id": 26000062
     },
     {
-        "key": "electro-dragon",
+        "key": "electrodragon",
         "name": "Electro Dragon",
         "sc_key": "ElectroDragon",
         "elixir": 5,
@@ -704,7 +704,7 @@
         "id": 26000063
     },
     {
-        "key": "elixir-golem",
+        "key": "elixirgolem",
         "name": "Elixir Golem",
         "sc_key": "ElixirGolem",
         "elixir": 3,
@@ -715,7 +715,7 @@
         "id": 26000067
     },
     {
-        "key": "battle-healer",
+        "key": "battlehealer",
         "name": "Battle Healer",
         "sc_key": "BattleHealer",
         "elixir": 4,
@@ -737,7 +737,7 @@
         "id": 27000000
     },
     {
-        "key": "goblin-hut",
+        "key": "goblinhut",
         "name": "Goblin Hut",
         "sc_key": "GoblinHut",
         "elixir": 5,
@@ -759,7 +759,7 @@
         "id": 27000002
     },
     {
-        "key": "inferno-tower",
+        "key": "infernotower",
         "name": "Inferno Tower",
         "sc_key": "InfernoTower",
         "elixir": 5,
@@ -770,7 +770,7 @@
         "id": 27000003
     },
     {
-        "key": "bomb-tower",
+        "key": "bombtower",
         "name": "Bomb Tower",
         "sc_key": "BombTower",
         "elixir": 4,
@@ -781,7 +781,7 @@
         "id": 27000004
     },
     {
-        "key": "barbarian-hut",
+        "key": "barbarianhut",
         "name": "Barbarian Hut",
         "sc_key": "BarbarianHut",
         "elixir": 7,
@@ -803,7 +803,7 @@
         "id": 27000006
     },
     {
-        "key": "elixir-collector",
+        "key": "elixircollector",
         "name": "Elixir Collector",
         "sc_key": "Elixir Collector",
         "elixir": 6,
@@ -814,7 +814,7 @@
         "id": 27000007
     },
     {
-        "key": "x-bow",
+        "key": "xbow",
         "name": "X-Bow",
         "sc_key": "Xbow",
         "elixir": 6,
@@ -847,7 +847,7 @@
         "id": 27000010
     },
     {
-        "key": "goblin-cage",
+        "key": "goblincage",
         "name": "Goblin Cage",
         "sc_key": "GoblinCage",
         "elixir": 4,
@@ -902,7 +902,7 @@
         "id": 28000003
     },
     {
-        "key": "goblin-barrel",
+        "key": "goblinbarrel",
         "name": "Goblin Barrel",
         "sc_key": "GoblinBarrel",
         "elixir": 3,
@@ -979,7 +979,7 @@
         "id": 28000010
     },
     {
-        "key": "the-log",
+        "key": "thelog",
         "name": "The Log",
         "sc_key": "Log",
         "elixir": 2,
@@ -1023,7 +1023,7 @@
         "id": 28000014
     },
     {
-        "key": "barbarian-barrel",
+        "key": "barbarianbarrel",
         "name": "Barbarian Barrel",
         "sc_key": "BarbLog",
         "elixir": 2,
@@ -1045,7 +1045,7 @@
         "id": 28000016
     },
     {
-        "key": "giant-snowball",
+        "key": "giantsnowball",
         "name": "Giant Snowball",
         "sc_key": "Snowball",
         "elixir": 2,
