@@ -1,4 +1,6 @@
 package com.example.finalproject;
 
-public class HomeFragment {
+import androidx.fragment.app.Fragment;
+
+public class HomeFragment extends Fragment {
 }

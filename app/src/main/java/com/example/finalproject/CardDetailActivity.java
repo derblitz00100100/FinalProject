@@ -48,7 +48,7 @@ public class CardDetailActivity extends AppCompatActivity {
     }
 
     private void wireWidgets() {
-        goBackButton = findViewById(R.id.button_cardDetail_goback);
+        goBackButton = findViewById(R.id.button_cardDetail_goBack);
         name = findViewById(R.id.textview_itemcard_name);
         elixir = findViewById(R.id.textview_itemcard_elixir);
         cardType = findViewById(R.id.textview_itemcard_type);
