@@ -9,6 +9,7 @@ public class Card implements Parcelable {
     private String type;
     private int arena;
     private String description;
+    private String image;
 
     @Override
     public String toString() {
@@ -18,6 +19,7 @@ public class Card implements Parcelable {
                 ", type='" + type + '\'' +
                 ", arena=" + arena +
                 ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
                 '}';
     }
 
@@ -61,6 +63,10 @@ public class Card implements Parcelable {
         this.description = description;
     }
 
+    public String getImage() { return image; }
+
+    public void setImage(String image) { this.image = image; }
+
 
     @Override
     public int describeContents() {
@@ -74,6 +80,7 @@ public class Card implements Parcelable {
         dest.writeString(this.type);
         dest.writeInt(this.arena);
         dest.writeString(this.description);
+        dest.writeString(this.image);
     }
 
     public Card() {
@@ -85,9 +92,10 @@ public class Card implements Parcelable {
         this.type = in.readString();
         this.arena = in.readInt();
         this.description = in.readString();
+        this.image = in.readString();
     }
 
-    public static final Parcelable.Creator<Card> CREATOR = new Parcelable.Creator<Card>() {
+    public static final Creator<Card> CREATOR = new Creator<Card>() {
         @Override
         public Card createFromParcel(Parcel source) {
             return new Card(source);

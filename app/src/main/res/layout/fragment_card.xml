@@ -21,4 +21,11 @@
         tools:layout_editor_absoluteX="-285dp"
         tools:layout_editor_absoluteY="-57dp" />
 
+    <ListView
+        android:id="@+id/listview_card_cardlistview"
+        android:layout_width="395dp"
+        android:layout_height="715dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
