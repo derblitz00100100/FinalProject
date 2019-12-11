@@ -47,8 +47,6 @@ public class CardsFragment extends Fragment {
 
         cardType = getArguments().getString(MainActivity.EXTRA_CARDTYPE);
 
-        sortCardByType(cardType);
-
         InputStream JsonFileInputStream = getResources().openRawResource(R.raw.cards);
         String jsonString = readTextFile(JsonFileInputStream);
         Gson gson = new Gson();
@@ -56,7 +54,7 @@ public class CardsFragment extends Fragment {
         cardList = Arrays.asList(cards);
         Log.d("from card adapter", "onCreate: " + cardList.toString());
 
-
+//        sortCardByType(cardType);
 
         cardAdapter = new CardAdapter(cardList);
         cardListView.setAdapter(cardAdapter);
@@ -126,8 +124,8 @@ public class CardsFragment extends Fragment {
             TextView textViewType = convertView.findViewById(R.id.textview_itemcard_type);
 
             textViewName.setText(cardsList.get(position).getName());
-            textViewElixir.setText(cardsList.get(position).getElixir());
-            textViewType.setText(String.valueOf(cardsList.get(position).getType()));
+            textViewType.setText(cardsList.get(position).getType());
+            textViewElixir.setText(String.valueOf(cardsList.get(position).getElixir()));
 
             return convertView;
         }

@@ -29,8 +29,9 @@ public class CardDetailActivity extends AppCompatActivity {
 
         name.setText(cardSelected.getName());
         description.setText(cardSelected.getDescription());
-        elixir.setText(cardSelected.getElixir());
+        elixir.setText(cardSelected.getElixir() + "");
         cardType.setText(cardSelected.getType() + "");
+        arena.setText((cardSelected.getArena() + ""));
         int resourceImage = getResources().getIdentifier(cardSelected.getImage(), "drawable", getPackageName());
         cardProfile.setImageDrawable(getResources().getDrawable(resourceImage));
 
@@ -49,9 +50,9 @@ public class CardDetailActivity extends AppCompatActivity {
 
     private void wireWidgets() {
         goBackButton = findViewById(R.id.button_cardDetail_goBack);
-        name = findViewById(R.id.textview_itemcard_name);
-        elixir = findViewById(R.id.textview_itemcard_elixir);
-        cardType = findViewById(R.id.textview_itemcard_type);
+        name = findViewById(R.id.textView_cardDetail_detail);
+        elixir = findViewById(R.id.textView_cardDetail_elixir);
+        cardType = findViewById(R.id.textView_cardDetail_type);
         arena = findViewById(R.id.textView_cardDetail_arena);
         description = findViewById(R.id.textView_cardDetail_detail);
         cardProfile = findViewById(R.id.imageView_cardDetail_image);
