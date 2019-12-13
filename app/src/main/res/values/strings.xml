@@ -18,4 +18,10 @@
     <string name="rare">Rare</string>
     <string name="common">Common</string>
     <string name="clash_royale_cards">Clash Royale Cards</string>
+    <string name="goBack">Go Back</string>
+    <string name="detail">detail</string>
+    <string name="name">name</string>
+    <string name="arena">arena</string>
+    <string name="type">type</string>
+    <string name="elixir">elixir</string>
 </resources>

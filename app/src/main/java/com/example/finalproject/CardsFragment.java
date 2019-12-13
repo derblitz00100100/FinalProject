@@ -1,13 +1,16 @@
 package com.example.finalproject;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -16,9 +19,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.google.gson.Gson;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 import java.util.List;
 
 public class CardsFragment extends Fragment {
@@ -28,20 +34,44 @@ public class CardsFragment extends Fragment {
     // make method to sort json into list of only rarity selected
     private String cardType;
     private ListView cardListView;
+    private List<Card> cardList;
     private CardAdapter cardAdapter;
+
+    public static final String EXTRA_CARD = "card selected";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_card, container, false);
         wireWidgets(rootView);
+
         cardType = getArguments().getString(MainActivity.EXTRA_CARDTYPE);
 
+        InputStream JsonFileInputStream = getResources().openRawResource(R.raw.cards);
+        String jsonString = readTextFile(JsonFileInputStream);
+        Gson gson = new Gson();
+        Card[] cards = gson.fromJson(jsonString, Card[].class);
+        cardList = Arrays.asList(cards);
+        Log.d("from card adapter", "onCreate: " + cardList.toString());
+
+//        sortCardByType(cardType);
+
+        cardAdapter = new CardAdapter(cardList);
+        cardListView.setAdapter(cardAdapter);
+
+        cardListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Intent targetIntent = new Intent(CardsFragment.this.getActivity(), CardDetailActivity.class);
+                targetIntent.putExtra(EXTRA_CARD, cardList.get(position));
+                startActivity(targetIntent);
+            }
+        });
         return rootView;
     }
 
     private void wireWidgets(View rootView) {
-
+        cardListView = rootView.findViewById(R.id.listview_card_cardlistview);
     }
 
     public String readTextFile(InputStream inputStream) {
@@ -61,12 +91,20 @@ public class CardsFragment extends Fragment {
         return outputStream.toString();
     }
 
-    private class cardAdapter extends ArrayAdapter<Card> {
+    public void sortCardByType(String cardType) {
+        for (int i = cardList.size() - 1; i >= 0; i--) {
+            if(!(cardList.get(i).getType().equals(cardType))) {
+                cardList.remove(i);
+            }
+        }
+    }
+
+    private class CardAdapter extends ArrayAdapter<Card> {
         // make an instance variable to keep track of the hero list
         private List<Card> cardsList;
 
         public CardAdapter(List<Card> cardsList) {
-            super(CardsFragment.this, -1, cardsList);
+            super(CardsFragment.this.getActivity(), -1, cardsList);
             this.cardsList = cardsList;
 
         }
@@ -78,42 +116,18 @@ public class CardsFragment extends Fragment {
             LayoutInflater inflater = getLayoutInflater();
 
             if (convertView == null) {
-                convertView = inflater.inflate(R.layout.item_hero, parent, false);
+                convertView = inflater.inflate(R.layout.item_card, parent, false);
             }
 
-            TextView textViewName = convertView.findViewById(R.id.textView_heroitem_name);
-            TextView textViewRank = convertView.findViewById(R.id.textView_heroitem_rank);
-            TextView textViewDescription = convertView.findViewById(R.id.textView_heroitem_description);
+            TextView textViewName = convertView.findViewById(R.id.textview_itemcard_name);
+            TextView textViewElixir = convertView.findViewById(R.id.textview_itemcard_elixir);
+            TextView textViewType = convertView.findViewById(R.id.textview_itemcard_type);
 
-            textViewName.setText(heroesList.get(position).getName());
-            textViewDescription.setText(heroesList.get(position).getDescription());
-            textViewRank.setText(String.valueOf(heroesList.get(position).getRanking()));
+            textViewName.setText(cardsList.get(position).getName());
+            textViewType.setText(cardsList.get(position).getType());
+            textViewElixir.setText(String.valueOf(cardsList.get(position).getElixir()));
 
             return convertView;
-        }
-    }
-
-    // this is for the
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_heroeslist_sorting, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle item selection
-        switch (item.getItemId()) {
-            case R.id.action_heroeslist_sort_by_name:
-                sortByName();
-                return true;
-            case R.id.action_heroeslist_sort_by_rank:
-                sortByRank();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
         }
     }
 }
