@@ -10,22 +10,7 @@
         "description": "A tough melee fighter. The Barbarian's handsome, cultured cousin. Rumor has it that he was knighted based on the sheer awesomeness of his mustache alone.",
         "id": 26000000
     },
-    {
-        "key": "ian",
-        "name": "Ian",
-        "sc_key": "Ian",
-        "elixir": 10,
-        "type": "GOD",
-        "rarity": "LEGENDARY",
-        "arena": 14,
-        "description": "An absolute rig, 250 pounds of straight muscle, a typical god, rules over the weak humans he is acquainted with",
-        "id": 26000000
 
-
-
-
-
-    },
     {
         "key": "archers",
         "name": "Archers",
