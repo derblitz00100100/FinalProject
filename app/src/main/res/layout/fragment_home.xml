@@ -12,7 +12,7 @@
         android:layout_height="43dp"
         android:text="TextView"
         tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="444dp" />
+        tools:layout_editor_absoluteY="410dp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -27,6 +27,6 @@
         android:layout_width="163dp"
         android:layout_height="92dp"
         tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="301dp"
+        tools:layout_editor_absoluteY="114dp"
         tools:srcCompat="@tools:sample/avatars" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,7 +29,7 @@ import android.view.Menu;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public static final String EXTRA_CARDTYPE = "cardtype";
+    public static final String EXTRA_CARDRARITY = "cardrarity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +115,28 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_common) {
             fragment = new CardsFragment();
             Bundle bundle = new Bundle();
-            bundle.putString(EXTRA_CARDTYPE,"common");
+            bundle.putString(EXTRA_CARDRARITY,"Common");
+            fragment.setArguments(bundle);
+        }
+
+        if (id == R.id.nav_rare) {
+            fragment = new CardsFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString(EXTRA_CARDRARITY,"Rare");
+            fragment.setArguments(bundle);
+        }
+
+        if (id == R.id.nav_epic) {
+            fragment = new CardsFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString(EXTRA_CARDRARITY,"Epic");
+            fragment.setArguments(bundle);
+        }
+
+        if (id == R.id.nav_legendary) {
+            fragment = new CardsFragment();
+            Bundle bundle = new Bundle();
+            bundle.putString(EXTRA_CARDRARITY,"Legendary");
             fragment.setArguments(bundle);
         }
 

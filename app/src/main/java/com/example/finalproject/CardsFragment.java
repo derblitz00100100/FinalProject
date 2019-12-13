@@ -1,13 +1,9 @@
 package com.example.finalproject;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -25,6 +21,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class CardsFragment extends Fragment {
@@ -32,7 +29,7 @@ public class CardsFragment extends Fragment {
     // clicking on any of the rarities will change the argument
     // all rarities lead to this fragment
     // make method to sort json into list of only rarity selected
-    private String cardType;
+    private String cardRarity;
     private ListView cardListView;
     private List<Card> cardList;
     private CardAdapter cardAdapter;
@@ -45,16 +42,16 @@ public class CardsFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_card, container, false);
         wireWidgets(rootView);
 
-        cardType = getArguments().getString(MainActivity.EXTRA_CARDTYPE);
+        cardRarity = getArguments().getString(MainActivity.EXTRA_CARDRARITY);
 
         InputStream JsonFileInputStream = getResources().openRawResource(R.raw.cards);
         String jsonString = readTextFile(JsonFileInputStream);
         Gson gson = new Gson();
         Card[] cards = gson.fromJson(jsonString, Card[].class);
-        cardList = Arrays.asList(cards);
+        cardList = new LinkedList<Card>(Arrays.asList(cards));
         Log.d("from card adapter", "onCreate: " + cardList.toString());
 
-//        sortCardByType(cardType);
+        sortCardByType(cardRarity);
 
         cardAdapter = new CardAdapter(cardList);
         cardListView.setAdapter(cardAdapter);
@@ -92,8 +89,8 @@ public class CardsFragment extends Fragment {
     }
 
     public void sortCardByType(String cardType) {
-        for (int i = cardList.size() - 1; i >= 0; i--) {
-            if(!(cardList.get(i).getType().equals(cardType))) {
+        for (int i = this.cardList.size() - 1; i >= 0; i--) {
+            if(!(this.cardList.get(i).getRarity().equals(cardRarity))) {
                 cardList.remove(i);
             }
         }

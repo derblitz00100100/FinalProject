@@ -2,6 +2,7 @@ package com.example.finalproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -26,13 +27,14 @@ public class CardDetailActivity extends AppCompatActivity {
         setListeners();
         Intent lastIntent = getIntent();
         Card cardSelected = lastIntent.getParcelableExtra(CardsFragment.EXTRA_CARD);
+        Log.d("from card selected", "onCreate: " + cardSelected.toString());
 
         name.setText(cardSelected.getName());
         description.setText(cardSelected.getDescription());
-        elixir.setText(cardSelected.getElixir() + "");
-        cardType.setText(cardSelected.getType() + "");
-        arena.setText((cardSelected.getArena() + ""));
-        int resourceImage = getResources().getIdentifier(cardSelected.getImage(), "drawable", getPackageName());
+        elixir.setText("Elixir Count: " + cardSelected.getElixir());
+        cardType.setText(cardSelected.getType());
+        arena.setText(("Arena #" + cardSelected.getArena()));
+        int resourceImage = getResources().getIdentifier(cardSelected.getKey(), "drawable", getPackageName());
         cardProfile.setImageDrawable(getResources().getDrawable(resourceImage));
 
     }
@@ -50,7 +52,7 @@ public class CardDetailActivity extends AppCompatActivity {
 
     private void wireWidgets() {
         goBackButton = findViewById(R.id.button_cardDetail_goBack);
-        name = findViewById(R.id.textView_cardDetail_detail);
+        name = findViewById(R.id.textView_cardDetail_name);
         elixir = findViewById(R.id.textView_cardDetail_elixir);
         cardType = findViewById(R.id.textView_cardDetail_type);
         arena = findViewById(R.id.textView_cardDetail_arena);
