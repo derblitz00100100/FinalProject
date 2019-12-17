@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -117,12 +118,14 @@ public class CardsFragment extends Fragment {
             }
 
             TextView textViewName = convertView.findViewById(R.id.textview_itemcard_name);
-            TextView textViewElixir = convertView.findViewById(R.id.textview_itemcard_elixir);
+            ImageView imageViewProfile = convertView.findViewById(R.id.imageview_itemcard_profile);
             TextView textViewType = convertView.findViewById(R.id.textview_itemcard_type);
 
             textViewName.setText(cardsList.get(position).getName());
             textViewType.setText(cardsList.get(position).getType());
-            textViewElixir.setText(String.valueOf(cardsList.get(position).getElixir()));
+            int resourceImage = getResources().getIdentifier(cardList.get(position).getKey(), "drawable", getActivity().getPackageName());
+            imageViewProfile.setImageDrawable(getResources().getDrawable(resourceImage));
+
 
             return convertView;
         }
