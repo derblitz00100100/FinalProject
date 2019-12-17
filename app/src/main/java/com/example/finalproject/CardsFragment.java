@@ -1,6 +1,7 @@
 package com.example.finalproject;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -124,7 +125,13 @@ public class CardsFragment extends Fragment {
             textViewName.setText(cardsList.get(position).getName());
             textViewType.setText(cardsList.get(position).getType());
             int resourceImage = getResources().getIdentifier(cardList.get(position).getKey(), "drawable", getActivity().getPackageName());
-            imageViewProfile.setImageDrawable(getResources().getDrawable(resourceImage));
+            try {
+                imageViewProfile.setImageDrawable(getResources().getDrawable(resourceImage));
+            } catch (Resources.NotFoundException e) {
+                Log.d("cardfragment", cardList.get(position).getName());
+                e.printStackTrace();
+
+            }
 
 
             return convertView;
